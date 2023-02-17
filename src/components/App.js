@@ -1,9 +1,15 @@
 import React, {useState} from 'react'
 import '../styles/App.css';
-const App = () => {
-//code here 
-  
 
+  
+function App() {
+  const [btn1Text, setBtn1Text] = useState("OFF");
+  const [btn2Text, setBtn2Text] = useState("ON");
+
+  const handleClick = () => {
+    setBtn1Text(btn1Text === "OFF" ? "ON" : "OFF");
+    setBtn2Text(btn2Text === "OFF" ? "ON" : "OFF");
+  };
   
   return (
     <div className="App">
@@ -17,7 +23,7 @@ const App = () => {
       </button>
     </div>
   );
-}
 
+}
 
 export default App;
