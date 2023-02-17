@@ -1,9 +1,6 @@
 import React, {useState} from 'react'
 import '../styles/App.css';
 
-  
-import React, { useState } from "react";
-
 const App = () => {
   const [btn1Text, setBtn1Text] = useState("OFF");
   const [btn2Text, setBtn2Text] = useState("ON");
