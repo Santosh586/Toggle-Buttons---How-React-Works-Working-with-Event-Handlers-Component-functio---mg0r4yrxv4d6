@@ -1,25 +1,31 @@
 import React, {useState} from 'react'
 import '../styles/App.css';
-
 const App = () => {
-  const [btn1Text, setBtn1Text] = useState("OFF");
-  const [btn2Text, setBtn2Text] = useState("ON");
+//code here 
+  const [value,setValue]=useState(false)
+  
+  const handleClick=()=>{
+    setValue(!value)
+    
+  }
+  
 
-  const handleClick = () => {
-    setBtn1Text((prevState) => (prevState === "OFF" ? "ON" : "OFF"));
-    setBtn2Text((prevState) => (prevState === "OFF" ? "ON" : "OFF"));
-  };
-
+  
   return (
-    <div>
+    <div className="App">
       <button id="btn1" onClick={handleClick}>
-        {btn1Text}
+      {/* assign value for button 1 */}
+       {value ? "ON" : "OFF"}
       </button>
+      <br />
+      <br />
       <button id="btn2" onClick={handleClick}>
-        {btn2Text}
+        {/* assign value for button 2 */}
+        {value ? "OFF" : "ON"}
       </button>
     </div>
   );
-};
+}
+
 
 export default App;
